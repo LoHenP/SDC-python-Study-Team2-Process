@@ -44,6 +44,7 @@ class ServerSocketServiceImpl(ServerSocketService):
         clientSocket, clientAddress = self.__serverSocketRepository.acceptClientSocket()
 
         if clientSocket is not None:
+            print(f"ServerSocketService: {clientSocket}")
             taskManageRepository = TaskManageRepositoryImpl.getInstance()
             transmitterRepository = TransmitterRepositoryImpl.getInstance()
             receiverRepository = ReceiverRepositoryImpl.getInstance()
